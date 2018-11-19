@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\Owner\\Documents\\GitHub\\Weedkly-Game-Jam-71---Top-down-Shooter\\WeeklyGameJam71TopDownShooter\\Assembly-CSharp.csproj",
+  "TargetFramework": "v3.5",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
