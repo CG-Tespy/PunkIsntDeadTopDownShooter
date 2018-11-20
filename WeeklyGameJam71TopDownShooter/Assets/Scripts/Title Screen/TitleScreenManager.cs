@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using System.Collections.Generic; 
 using UnityEngine;
 using DG.Tweening;
-
+using UnityEngine.SceneManagement;
 
 public class TitleScreenManager : MonoBehaviour {
     [HideInInspector]
@@ -30,6 +30,10 @@ public class TitleScreenManager : MonoBehaviour {
         //#if UNITY_EDITOR
         //    UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
         //#endif
+    }
+
+    public void LoadMainGame() {
+        SceneManager.LoadScene("main", LoadSceneMode.Single);
     }
 
     public void MainMenu() {
