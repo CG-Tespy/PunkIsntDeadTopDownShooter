@@ -61,6 +61,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
     <Compile Include="Assets\Scripts\Actors\Actor2D.cs" />
     <Compile Include="Assets\Scripts\Actors\Bullet2D.cs" />
     <Compile Include="Assets\Scripts\Actors\Enemy\EnemyController.cs" />
@@ -79,6 +90,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\StringVariable.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\VariableObject.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\VariableReference.cs" />
+    <Compile Include="Assets\Scripts\Title Screen\TitleScreenManager.cs" />
     <Compile Include="Assets\Scripts\Utils\ContactEvents2D.cs" />
     <Compile Include="Assets\Scripts\Utils\ContactEvents3D.cs" />
     <Compile Include="Assets\Scripts\Utils\Extensions\Collider2DExtensions.cs" />
@@ -91,6 +103,10 @@
     <Compile Include="Assets\Scripts\Utils\TextSettings.cs" />
     <Compile Include="Assets\Scripts\Utils\UIElementController.cs" />
     <Compile Include="Assets\Scripts\Utils\UIEvents.cs" />
+    <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/thatf/OneDrive/Documents/GitHub/PunkIsntDeadTopDownShooter/WeeklyGameJam71TopDownShooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
@@ -307,6 +323,15 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/thatf/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>C:/Users/thatf/OneDrive/Documents/GitHub/PunkIsntDeadTopDownShooter/WeeklyGameJam71TopDownShooter/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/thatf/OneDrive/Documents/GitHub/PunkIsntDeadTopDownShooter/WeeklyGameJam71TopDownShooter/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>C:/Users/thatf/OneDrive/Documents/GitHub/PunkIsntDeadTopDownShooter/WeeklyGameJam71TopDownShooter/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
