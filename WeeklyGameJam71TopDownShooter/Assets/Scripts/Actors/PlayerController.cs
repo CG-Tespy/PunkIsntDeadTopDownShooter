@@ -23,8 +23,8 @@ public class PlayerController : MortalActor2D
 	protected override void HandleMovement()
 	{
 		// Simple 2d movement.
-		Vector2 horizontal = 					Vector2.right * Input.GetAxis("Horizontal");
-		Vector2 vertical = 						Vector2.up * Input.GetAxis("Vertical");
+		Vector2 horizontal = 					Vector2.right * Input.GetAxisRaw("Horizontal");     // Baradoros: Changed to Input.GetAxisRaw to remove the acceleration and deceleration
+		Vector2 vertical = 						Vector2.up * Input.GetAxisRaw("Vertical");
 
 		Vector2 movement = 						(horizontal + vertical) * moveSpeed * Time.deltaTime;
 		Vector3 newPos = 						rigidbody.position + movement;
