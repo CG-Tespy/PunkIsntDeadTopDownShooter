@@ -9,6 +9,7 @@ using UnityEngine.Events;
 /// </summary>
 public class EnemyWaveSequencer : MonoBehaviour 
 {
+	public UnityEvent AllWavesDead  							{ get; protected set; }
 	[SerializeField] EnemyWave[] waves;
 	[SerializeField] bool continueOnWaveDeath;
 	[SerializeField] float spawnInterval = 						3;
@@ -20,6 +21,8 @@ public class EnemyWaveSequencer : MonoBehaviour
 	{
 		if (waves.Length == 0)
 			throw new System.MissingFieldException(this.name + " needs waves to spawn.");
+
+		AllWavesDead = 											new UnityEvent();
 		
 	}
 	
@@ -38,8 +41,11 @@ public class EnemyWaveSequencer : MonoBehaviour
 
 	void SpawnNextWave()
 	{
-		if (waveIndex == waves.Length)
+		if (waveIndex == waves.Length) // At this point, all the waves are dead, so...
+		{
+			AllWavesDead.Invoke();
 			return;
+		}
 			
 		waves[waveIndex].Activate();
 		waveIndex++;
