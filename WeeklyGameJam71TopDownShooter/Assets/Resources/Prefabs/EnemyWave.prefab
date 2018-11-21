@@ -307,7 +307,7 @@ MonoBehaviour:
   invinTime: 0
   _target: {fileID: 0}
   fireRate: 1
-  bulletPrefab: {fileID: 114590905427416600, guid: a59c3e2fe6c02a2409b3a090f672ffd1,
+  bulletPrefab: {fileID: 114590905427416600, guid: c05d99a14e7d6994fb21c5e63d8e4994,
     type: 2}
 --- !u!212 &212641213405646778
 SpriteRenderer:

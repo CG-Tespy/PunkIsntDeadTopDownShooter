@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61672021243814246
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -103,7 +103,7 @@ MonoBehaviour:
   _moveSpeed: 3
   damageLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
   destroySelfOn:
     serializedVersion: 2
     m_Bits: 4294966783

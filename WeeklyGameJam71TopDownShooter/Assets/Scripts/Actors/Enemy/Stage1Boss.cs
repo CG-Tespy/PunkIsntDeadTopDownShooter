@@ -34,7 +34,7 @@ public class Stage1Boss : RangedEnemy
 		if (firingTimer <= 0)
 		{
 			FanShot();
-			firingTimer = 			fireRate;
+			firingTimer = 			1 / fireRate;
 		}
 		else 
 			firingTimer -= 			Time.deltaTime;
@@ -78,8 +78,6 @@ public class Stage1Boss : RangedEnemy
 
 			bullet.velocity = 					shotDir.normalized * bullet.moveSpeed;
 
-			// Make sure the bullets can't collide with each other.
-			bullet.gameObject.layer = 			this.gameObject.layer;
 		}
 		
 

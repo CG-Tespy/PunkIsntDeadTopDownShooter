@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4354279580090232}
   - component: {fileID: 212228505041528494}
-  - component: {fileID: 114590905427416600}
   - component: {fileID: 61672021243814246}
   - component: {fileID: 50875201651777014}
+  - component: {fileID: 114590905427416600}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61672021243814246
 BoxCollider2D:
   m_ObjectHideFlags: 1

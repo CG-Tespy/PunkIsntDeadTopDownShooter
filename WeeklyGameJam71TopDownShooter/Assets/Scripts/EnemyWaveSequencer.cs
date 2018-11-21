@@ -54,7 +54,8 @@ public class EnemyWaveSequencer : MonoBehaviour
 	void DeactivateAllWaves()
 	{
 		foreach (EnemyWave wave in waves)
-			wave.Deactivate();
+			if (wave.gameObject.activeSelf)
+				wave.Deactivate();
 
 		waveIndex = 						0;
 	}

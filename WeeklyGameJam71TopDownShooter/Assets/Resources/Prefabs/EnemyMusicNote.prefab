@@ -20,11 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4354279580090232}
   - component: {fileID: 212228505041528494}
-  - component: {fileID: 61737306503206614}
-  - component: {fileID: 50759388426648560}
-  - component: {fileID: 114908288451838078}
+  - component: {fileID: 61672021243814246}
+  - component: {fileID: 50875201651777014}
+  - component: {fileID: 114590905427416600}
   m_Layer: 0
-  m_Name: AllyBullet
+  m_Name: EnemyMusicNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,14 +36,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001322265367784}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.023, y: 2.6723416, z: -3.489002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23, y: -1.3765837, z: -3.489002}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50759388426648560
+--- !u!50 &50875201651777014
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61737306503206614
+--- !u!61 &61672021243814246
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -79,7 +79,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.3}
+    oldSize: {x: 0.21, y: 0.3}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &114908288451838078
+--- !u!114 &114590905427416600
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,19 +96,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1001322265367784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5eb26845d95a14e892a34f6d5ef8e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 405cff4c32939384cbb8b35b9539bd61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _collidersTouching: []
   _moveSpeed: 3
   damageLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
   destroySelfOn:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 4294966783
   damage: 5
-  rotationSpeeds: {x: 0, y: 1000, z: 0}
 --- !u!212 &212228505041528494
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,8 +143,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: edf743e5b7d91604b96798da9b518ee7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300002, guid: edf743e5b7d91604b96798da9b518ee7, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

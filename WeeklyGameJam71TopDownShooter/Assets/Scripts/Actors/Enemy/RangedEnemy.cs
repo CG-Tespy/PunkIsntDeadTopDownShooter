@@ -17,6 +17,7 @@ public class RangedEnemy : EnemyController
 	{
 		base.Awake();
 		canShoot = 												true;
+		firingTimer = 											1 / fireRate;
 	}
 
 	protected override void Update()
@@ -49,7 +50,7 @@ public class RangedEnemy : EnemyController
 			bullet.velocity = 			shootDir;
 			bullet.gameObject.layer = 	this.gameObject.layer;
 
-			firingTimer = 				fireRate;
+			firingTimer = 				1 / fireRate;
 		}
 		else 
 			firingTimer -= 				Time.deltaTime;
