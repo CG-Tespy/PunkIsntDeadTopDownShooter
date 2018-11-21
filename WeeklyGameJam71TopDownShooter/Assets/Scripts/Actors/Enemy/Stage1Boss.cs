@@ -7,12 +7,10 @@ using UnityEngine.Events;
 /// <summary>
 /// Just shoots fans of discs that ricochet off the walls.
 /// </summary>
-public class Stage1Boss : EnemyController
+public class Stage1Boss : RangedEnemy
 {
-	[SerializeField] Bullet2D discPrefab;
-	[SerializeField] int discsPerFan = 				3;
-	Vector2 moveDir = 								Vector2.right;
-
+	[SerializeField] int bulletsPerFan = 				3;
+	
 	// Use this for initializing own members
 	protected override void Awake () 
 	{
@@ -24,17 +22,61 @@ public class Stage1Boss : EnemyController
 	{
 		// Movement no longer handled here.
 		//collidersTouching.RemoveAll((Collider2D coll) => coll == null);
+		HandleShooting();
 		
 	}
 
+	protected override void HandleShooting()
+	{
+		if (!canShoot)
+			return;
+
+		if (firingTimer <= 0)
+		{
+			FanShot();
+			firingTimer = 			fireRate;
+		}
+		else 
+			firingTimer -= 			Time.deltaTime;
+		
+	}
 	void FanShot()
 	{
-		// Decide where each disc should go. Have the discs spread apart as evenly 
-		// as possible in the fan.
+		// Decide where each disc should go.
 		float distOffset = 						1;
-		Vector2 posOffset = 					distOffset * Vector2.down;
 
-		List<Vector2> discPositions = 			new List<Vector2>();
+		List<Vector2> bulletPositions = 		new List<Vector2>();
+		Vector2 bulletPos = 					Vector2.zero;
+		float
+			minAngle = 							180,
+			maxAngle = 							360,
+			angleStep = 						(maxAngle - minAngle) / bulletsPerFan,
+			shotAngle = 						minAngle;
+
+		// angleStep is to help the bullets be spread as evenly as possible in the fan.
+		for (int i = 0; i < bulletsPerFan; i++)
+		{
+			bulletPos.x = 						Mathf.Cos(shotAngle) * distOffset;
+			bulletPos.y = 						Mathf.Sin(shotAngle) * distOffset;
+
+			bulletPos += 						rigidbody.position;
+
+			bulletPositions.Add(bulletPos);
+			shotAngle += 						angleStep;
+		}
+
+		// Now, spawn bullets at each of those positions...
+		Vector2 shotDir = 						Vector2.zero;
+		foreach (Vector2 spawnPos in bulletPositions)
+		{
+			Bullet2D bullet = 					Instantiate<Bullet2D>(bulletPrefab, spawnPos, 
+																	Quaternion.identity);
+
+			// ... Making them go off in the right directions.
+			shotDir = 							bullet.rigidbody.position - rigidbody.position;
+
+			bullet.velocity = 					shotDir.normalized * bullet.moveSpeed;
+		}
 		
 
 	}

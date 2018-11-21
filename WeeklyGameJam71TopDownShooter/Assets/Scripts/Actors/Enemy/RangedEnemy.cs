@@ -7,16 +7,16 @@ using UnityEngine.Events;
 public class RangedEnemy : EnemyController
 {
 	[Tooltip("How many shots are done per second.")]
-	[SerializeField] float fireRate = 					1;
-	[SerializeField] Bullet2D bulletPrefab;
-	float firingTimer = 								0;
-	public virtual bool canShoot 						{ get; set; }
-	Vector2 moveDir = 									Vector2.right;
+	[SerializeField] protected float fireRate = 				1;
+	[SerializeField] protected Bullet2D bulletPrefab;
+	protected float firingTimer = 								0;
+	public virtual bool canShoot 								{ get; set; }
+	protected Vector2 moveDir = 								Vector2.right;
 
 	protected override void Awake()
 	{
 		base.Awake();
-		canShoot = 										true;
+		canShoot = 												true;
 	}
 
 	protected override void Update()

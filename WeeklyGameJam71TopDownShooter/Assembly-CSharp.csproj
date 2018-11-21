@@ -53,16 +53,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
      <Compile Include="Assets\Scripts\Actors\Actor2D.cs" />
      <Compile Include="Assets\Scripts\Actors\Bullet2D.cs" />
      <Compile Include="Assets\Scripts\Actors\Enemy\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Actors\Enemy\MeleeEnemy.cs" />
      <Compile Include="Assets\Scripts\Actors\Enemy\RangedEnemy.cs" />
+     <Compile Include="Assets\Scripts\Actors\Enemy\Stage1Boss.cs" />
      <Compile Include="Assets\Scripts\Actors\MortalActor2D.cs" />
      <Compile Include="Assets\Scripts\Actors\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\BossCaller.cs" />
      <Compile Include="Assets\Scripts\DamageOnContact2D.cs" />
      <Compile Include="Assets\Scripts\EnemyWave.cs" />
      <Compile Include="Assets\Scripts\EnemyWaveSequencer.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\IDamageable.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\BoolVariable.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\FloatReference.cs" />
@@ -71,6 +85,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\StringVariable.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\VariableObject.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\VariableReference.cs" />
+     <Compile Include="Assets\Scripts\Title Screen\TitleScreenManager.cs" />
      <Compile Include="Assets\Scripts\Utils\ContactEvents2D.cs" />
      <Compile Include="Assets\Scripts\Utils\ContactEvents3D.cs" />
      <Compile Include="Assets\Scripts\Utils\Extensions\Collider2DExtensions.cs" />
@@ -83,12 +98,16 @@
      <Compile Include="Assets\Scripts\Utils\TextSettings.cs" />
      <Compile Include="Assets\Scripts\Utils\UIElementController.cs" />
      <Compile Include="Assets\Scripts\Utils\UIEvents.cs" />
+     <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
+     <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Owner/Documents/GitHub/Weedkly-Game-Jam-71---Top-down-Shooter/WeeklyGameJam71TopDownShooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/GitHub/PunkIsntDeadTopDownShooter/WeeklyGameJam71TopDownShooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Owner/Documents/GitHub/Weedkly-Game-Jam-71---Top-down-Shooter/WeeklyGameJam71TopDownShooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/GitHub/PunkIsntDeadTopDownShooter/WeeklyGameJam71TopDownShooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity2018.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -284,6 +303,15 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Program Files/Unity2018.1.8f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="DemiLib">
+ <HintPath>C:/Users/Owner/Documents/GitHub/PunkIsntDeadTopDownShooter/WeeklyGameJam71TopDownShooter/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/Owner/Documents/GitHub/PunkIsntDeadTopDownShooter/WeeklyGameJam71TopDownShooter/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenPro">
+ <HintPath>C:/Users/Owner/Documents/GitHub/PunkIsntDeadTopDownShooter/WeeklyGameJam71TopDownShooter/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/Owner/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
