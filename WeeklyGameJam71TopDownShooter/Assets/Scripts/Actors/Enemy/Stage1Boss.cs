@@ -15,7 +15,7 @@ public class Stage1Boss : RangedEnemy
 	protected override void Awake () 
 	{
 		base.Awake();
-		HandleMovement();
+		//HandleMovement();
 	}
 	
 	protected override void Update () 
@@ -48,10 +48,10 @@ public class Stage1Boss : RangedEnemy
 		List<Vector2> bulletPositions = 		new List<Vector2>();
 		Vector2 bulletPos = 					Vector2.zero;
 		float
-			minAngle = 							180,
-			maxAngle = 							360,
-			angleStep = 						(maxAngle - minAngle) / bulletsPerFan,
-			shotAngle = 						minAngle;
+			minAngle = 							200,
+			maxAngle = 							340,
+			angleStep = 						((maxAngle - minAngle) / (bulletsPerFan - 1)) * Mathf.Deg2Rad,
+			shotAngle = 						minAngle * Mathf.Deg2Rad;
 
 		// angleStep is to help the bullets be spread as evenly as possible in the fan.
 		for (int i = 0; i < bulletsPerFan; i++)
@@ -63,6 +63,7 @@ public class Stage1Boss : RangedEnemy
 
 			bulletPositions.Add(bulletPos);
 			shotAngle += 						angleStep;
+
 		}
 
 		// Now, spawn bullets at each of those positions...
@@ -76,6 +77,9 @@ public class Stage1Boss : RangedEnemy
 			shotDir = 							bullet.rigidbody.position - rigidbody.position;
 
 			bullet.velocity = 					shotDir.normalized * bullet.moveSpeed;
+
+			// Make sure the bullets can't collide with each other.
+			bullet.gameObject.layer = 			this.gameObject.layer;
 		}
 		
 
