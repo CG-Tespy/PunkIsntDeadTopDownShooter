@@ -15,7 +15,7 @@ public class Stage1Boss : RangedEnemy
 	protected override void Awake () 
 	{
 		base.Awake();
-		//HandleMovement();
+		HandleMovement();
 	}
 	
 	protected override void Update () 
@@ -42,12 +42,12 @@ public class Stage1Boss : RangedEnemy
 	}
 	void FanShot()
 	{
-		// Decide where each disc should go.
+		// Decide where each bullet should go.
 		float distOffset = 						1;
 
 		List<Vector2> bulletPositions = 		new List<Vector2>();
 		Vector2 bulletPos = 					Vector2.zero;
-		float
+		float // The min and max angles decide the shape and size of the fan.
 			minAngle = 							200,
 			maxAngle = 							340,
 			angleStep = 						((maxAngle - minAngle) / (bulletsPerFan - 1)) * Mathf.Deg2Rad,

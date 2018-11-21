@@ -620,7 +620,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 670798897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.17, z: 0}
+  m_LocalPosition: {x: 0, y: 2.81, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -647,9 +647,9 @@ MonoBehaviour:
   invinTime: 0
   _target: {fileID: 0}
   fireRate: 1
-  bulletPrefab: {fileID: 114590905427416600, guid: a59c3e2fe6c02a2409b3a090f672ffd1,
+  bulletPrefab: {fileID: 114134874097549012, guid: 254f36c91e5c624488976835b07d8766,
     type: 2}
-  bulletsPerFan: 8
+  bulletsPerFan: 5
 --- !u!50 &670798901
 Rigidbody2D:
   serializedVersion: 4
