@@ -32,8 +32,13 @@ public class TitleScreenManager : MonoBehaviour {
         //#endif
     }
 
+    IEnumerator DelayLoadScene(float time) {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("StageOne", LoadSceneMode.Single);
+    }
+
     public void LoadMainGame() {
-        SceneManager.LoadScene("main", LoadSceneMode.Single);
+        StartCoroutine(DelayLoadScene(1));
     }
 
     public void MainMenu() {
