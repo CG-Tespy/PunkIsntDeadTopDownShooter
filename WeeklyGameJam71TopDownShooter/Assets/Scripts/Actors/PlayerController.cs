@@ -18,8 +18,8 @@ public class PlayerController : MortalActor2D
 
     public void Start() {
         Animator anim = GetComponent<Animator>();
-        string character = manager.GetComponent<GameManager>().character;
-        anim.SetTrigger(character);
+        int character = manager.GetComponent<GameManager>().character;
+        anim.SetInteger("character", character);
     }
     // End
 
