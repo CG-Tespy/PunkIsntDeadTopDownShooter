@@ -6,6 +6,12 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager manager;
 
+    public Animator anim;
+    public AnimatorOverrideController char1;
+    public AnimatorOverrideController char2;
+    public AnimatorOverrideController char3;
+    public AnimatorOverrideController char4;
+
 	void Start () {
 		if (manager != this) {
             Destroy(gameObject);
@@ -15,7 +21,6 @@ public class GameManager : MonoBehaviour {
         }
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
