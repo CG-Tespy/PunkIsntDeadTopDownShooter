@@ -31,6 +31,8 @@ public class PauseMenu : MonoBehaviour {
 	}
 
     public void PauseGame() {
+
+        // Prevent player shooting
         player.GetComponent<PlayerController>().canShoot = false;
         pauseMenu.SetActive(true);
         audio.PlayOneShot(clip);
