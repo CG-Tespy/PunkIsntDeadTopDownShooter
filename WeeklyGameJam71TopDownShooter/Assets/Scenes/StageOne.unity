@@ -1574,6 +1574,21 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114908288451838078, guid: 6db46b10e521b864a9812482db27c3ec,
+        type: 2}
+      propertyPath: rotationSpeeds.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114908288451838078, guid: 6db46b10e521b864a9812482db27c3ec,
+        type: 2}
+      propertyPath: rotationSpeeds.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114908288451838078, guid: 6db46b10e521b864a9812482db27c3ec,
+        type: 2}
+      propertyPath: rotationSpeeds.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6db46b10e521b864a9812482db27c3ec, type: 2}
   m_IsPrefabAsset: 0
