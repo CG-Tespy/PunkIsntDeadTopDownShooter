@@ -12,7 +12,20 @@ public class PlayerController : MortalActor2D
 	public bool canShoot 						{ get; set; }
 	protected float firingTimer;
 
-	protected override void Awake()
+
+    // Baradoros
+    public GameObject manager;
+
+    public void Start() {
+        Animator anim = GetComponent<Animator>();
+        string character = manager.GetComponent<GameManager>().character;
+        anim.SetTrigger(character);
+    }
+    // End
+
+
+
+    protected override void Awake()
 	{
 		base.Awake();
 		canShoot = 								false;

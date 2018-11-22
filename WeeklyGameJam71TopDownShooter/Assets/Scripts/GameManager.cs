@@ -1,27 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager manager;
-
-    public Animator anim;
-    public AnimatorOverrideController char1;
-    public AnimatorOverrideController char2;
-    public AnimatorOverrideController char3;
-    public AnimatorOverrideController char4;
+    public int character;
 
 	void Start () {
+
+        // Singleton
 		if (manager != this) {
             Destroy(gameObject);
         } else if (manager == null) {
             manager = this;
             DontDestroyOnLoad(manager);
         }
+
+
 	}
 	
-	void Update () {
-		
-	}
+    public void SetCharacter(string c) {
+        character = int.Parse(c);
+    }
 }

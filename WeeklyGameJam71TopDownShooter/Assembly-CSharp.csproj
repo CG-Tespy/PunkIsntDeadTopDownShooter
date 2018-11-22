@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Pause Menu\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\RicochetingBullet2D.cs" />
     <Compile Include="Assets\Scripts\RotatingBullet2D.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\BoolVariable.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FloatReference.cs" />
