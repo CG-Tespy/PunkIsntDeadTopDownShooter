@@ -34,10 +34,23 @@ public class TitleScreenManager : MonoBehaviour {
 
     IEnumerator DelayLoadScene(float time) {
         yield return new WaitForSeconds(time);
+
         SceneManager.LoadScene("StageOne", LoadSceneMode.Single);
     }
 
+    IEnumerator DelayQuit(float time) {
+        yield return new WaitForSeconds(time);
+
+        #if UNITY_EDITOR
+            if (UnityEditor.EditorApplication.isPlaying == true)
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
+
     public void LoadMainGame() {
+        // Put anything that needs to go in this method in DelayLoadScene()
         StartCoroutine(DelayLoadScene(1));
     }
 
@@ -54,12 +67,7 @@ public class TitleScreenManager : MonoBehaviour {
     }
 
     public void Quit() {
-        #if UNITY_EDITOR
-            if (UnityEditor.EditorApplication.isPlaying == true)
-                UnityEditor.EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
-
+        // Put anything that needs to go in this method in DelayQuit()
+        StartCoroutine(DelayQuit(0.5f));
     }
 }
