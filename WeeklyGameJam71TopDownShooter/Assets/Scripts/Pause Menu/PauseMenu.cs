@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour {
     public AudioSource audio;
     public AudioClip clip;
 
+    public GameObject player;
+
     private bool pausable = true;
 
     void Start() {
@@ -17,12 +19,10 @@ public class PauseMenu : MonoBehaviour {
 
     void Update () {
 		if (Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.activeInHierarchy && pausable) {
-            audio.PlayOneShot(clip);
             PauseGame();
             pausable = false;
         }
         if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeInHierarchy && pausable) {
-            audio.PlayOneShot(clip);
             ContinueGame();
             pausable = false;
         }
@@ -31,17 +31,20 @@ public class PauseMenu : MonoBehaviour {
 	}
 
     public void PauseGame() {
-        Time.timeScale = 0.0f;
+        player.GetComponent<PlayerController>().canShoot = false;
         pauseMenu.SetActive(true);
+        audio.PlayOneShot(clip);
+        Time.timeScale = 0.0f;
     }
 
     public void ContinueGame() {
-        pauseMenu.SetActive(false);
+        player.GetComponent<PlayerController>().canShoot = true;
         Time.timeScale = 1.0f;
+        pauseMenu.SetActive(false);
     }
 
     public void QuitToMenu() {
-        Time.timeScale = 1.0f;
+        ContinueGame();
         SceneManager.LoadScene("Title Screen", LoadSceneMode.Single);
     }
 }

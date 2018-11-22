@@ -31,6 +31,9 @@ public class TitleScreenManager : MonoBehaviour {
         //    UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
         //#endif
     }
+    void Update() {
+        Debug.Log(Time.timeScale);
+    }
 
     IEnumerator DelayLoadScene(float time) {
         yield return new WaitForSeconds(time);
