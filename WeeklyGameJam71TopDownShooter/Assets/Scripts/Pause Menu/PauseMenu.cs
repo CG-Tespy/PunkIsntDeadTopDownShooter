@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour {
     public AudioSource audio;
     public AudioClip clip;
 
-    public GameObject player;
+
 
     private bool pausable = true;
 
@@ -33,14 +33,12 @@ public class PauseMenu : MonoBehaviour {
     public void PauseGame() {
 
         // Prevent player shooting
-        player.GetComponent<PlayerController>().canShoot = false;
         pauseMenu.SetActive(true);
         audio.PlayOneShot(clip);
         Time.timeScale = 0.0f;
     }
 
     public void ContinueGame() {
-        player.GetComponent<PlayerController>().canShoot = true;
         Time.timeScale = 1.0f;
         pauseMenu.SetActive(false);
     }
