@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\EnemyWave.cs" />
     <Compile Include="Assets\Scripts\EnemyWaveSequencer.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Pause Menu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\RotatingBullet2D.cs" />

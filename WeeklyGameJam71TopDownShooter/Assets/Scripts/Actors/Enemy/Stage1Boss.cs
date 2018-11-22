@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Just shoots fans of discs that ricochet off the walls.
@@ -16,6 +17,8 @@ public class Stage1Boss : RangedEnemy
 	{
 		base.Awake();
 		HandleMovement();
+        health = new FloatReference();
+        health.value = 400f;
 	}
 	
 	protected override void Update () 
@@ -102,4 +105,11 @@ public class Stage1Boss : RangedEnemy
 			HandleMovement();
 		}
 	}
+
+
+    public override void Die() {
+        base.Die();
+        
+        SceneManager.LoadScene("Credits", LoadSceneMode.Single);
+    }
 }
